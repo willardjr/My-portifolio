@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>projects</title>
+    </head>
+    <body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <style>
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color:seashell;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: darkblue;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .project-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .project-card {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .project-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .project-card h2 {
+      font-size: 20px;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      margin: 0;
+      text-transform: capitalize;
+      text-decoration-color: black
+    }
+    .buttons{
+        text-align: center;
+        background-color:seashell;
+        background: brown;
+
+    }
+    .buttons button{
+        border-radius: 10px; 
+        padding: 10px 20px; 
+        font-size: 16px;
+    }
+    form {
+        margin-bottom: 20px;
+      }
+      
+      form label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      
+      form input[type="search"] {
+        width: 200px;
+        padding: 10px;
+      }
+      
+      form button {
+        padding: 5px 10px;
+        background-color:darkblue;
+      }
+      
+      .project-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+      }
+      
+      .project-card {
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      
+
+    function filterProjects(category) {
+      const projectCards = document.querySelectorAll('.project-card');
+      projectCards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Projects</h1>
+  </header>
+  <form onsubmit="event.preventDefault();" role="search">
+    <label for="search">Search for Projects</label>
+    <input id="search" type="search" placeholder="Search..." autofocus required />
+    <button type="submit">Go</button>    
+  </form>
+
+  <div class="project-container">
+    <div class="project-card" data-category="web">
+      <img src="cillah.jpeg" alt="Project 1">
+      <h2>Web Development</h2>
+      <p>I created a Commercial Website for this Company<br>
+    where by Customers are able to book for flights, Hotels<br>
+and outside the country. In this Website there is also Tour packages<br>
+where by Tourists are able to know the cost of amount it will take<br>
+to finish their Tour.etc</p>
+      <a href="www.cillahtravels.com">Cillah Travels</a>
+    </div>
+
+    <div class="project-card" data-category="mobile">
+      <img src="420.png" alt="Project 2">
+      <h2>Music streaming Mobile App</h2>
+      <p>420 Records is a music record label company<br>
+    I was Involved in there streaming app development<br>
+    where by artist are able to upload music and Customers<br>
+    are able to buy music from artists by downloading them<br>
+    to there streaming accounts.</p>
+      <a href="420music.com">420 Music</a>
+    </div>
+
+    <div class="project-card" data-category="mobile">
+      <img src="estate.jpeg" alt="Project 3">
+      <h2>Mobile Booking Mobile App</h2>
+      <p>Mponda Estate Investment is a company that deals with<br>
+        estate managements. I created an app for this company where by<br>
+       clients are able to book for apartments online, choose plots that suit there<br>
+       there needs in different areas and places while on there phone</p>
+      <a href="mpondaestates.com">Mponda Estates</a>
+    </div>
+    <div class="project-card" data-category="web">
+        <img src="rowmic.jpg" alt="Project 4">
+        <h2>Website Development</h2>
+        <p>Rowmic Logistics is a logistics company that deals with<br>
+        japanese cars, in importing and selling them in local markets here in malawi.<br>
+        I created there website where you order cars of your choice from japan and you<br>
+        also look cars of your choice in the local markets of all the three cities</p>
+        <a href="rowmiclogistic.com">Rowmic Logistics</a>
+      </div>
+      <div class="project-card" data-category="web">
+        <img src="chatnet.jpg" alt="Project 5">
+        <h2>Website Development</h2>
+        <p>Chatnet Technologies is a Malawi based ICT company.<br>
+         I was involved in there website development project.<br>
+         We created a Commercial website for this company where <br>
+         customers can be able to view there services and also be able<br>
+         to book appointments for technicians online. This website can create <br>
+        quotations for the service you want after asking for a service.         </A></p>
+        <a href="chatnettechnologies.com">Chatnet Technologies</a>
+      </div>
+      <div class="project-card" data-category="web">
+        <img src="write.jpg" alt="Project 6">
+        <h2>Website Development</h2>
+        <p>Doc Write Company is a company that focuses in documentation,<br>
+        I created a website for this company where you can buy formal letter<br>
+         templates, company's profile templates and you can also have a tutor that<br>
+        that will help you to write company proposals.</p>
+        <a href="docwritecompany.com">Doc Write Company</a>
+      </div>
+      <div class="project-card" data-category="mobile">
+        <img src="landscaping.jpeg" alt="Project 7">
+        <h2>Customers Booking  Mobile App</h2>
+        <p>Mponda Landscaping is a lilongwe based company that<br>
+        offers landscaping services. I created the app for this<br>
+        company where you can ask for gardeners and ask for a garden service.</p>
+        <a href="mpondalandscaping.com">Mponda Landscaping</a>
+      </div>
+      <div class="project-card" data-category="web">
+        <img src="CYBERSPACE3.jpg" alt="Project 8">
+        <h2>Company's Blog</h2>
+        <p> This is a digital marketing company that provides making of flyes,<br>
+        banners, billboards, t-shirt printing and stationary. I created a blog for this company<br>
+        that shows there services.</p>
+        <a href="cyberspace.com">Cyberspace Digital Marketers</a>
+      </div>
+      <div class="project-card" data-category="web">
+        <img src="holding.jpeg" alt="Project 9">
+        <h2>Website Development</h2>
+        <p>This is the lilongwe based Holdings company that involvels<br>
+        alot of companies in it. I created a website for this company that directs<br>
+    a customer to different companies that they want to discover about them</p>
+        <a href="chatilimited.com">Chati Holdings</a>
+      </div>
+
+  </div>
+
+  <div class="buttons">
+    <button  onclick="filterProjects('all')">All</button>
+    <button onclick="filterProjects('web')">Web</button>
+    <button onclick="filterProjects('mobile')">Mobile</button>
+  </div>
+
+  <script>
+    function filterProjects(category) {
+      const projectCards = document.querySelectorAll('.project-card');
+      projectCards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+    document.querySelector("form").addEventListener("submit", function (event) {
+        event.preventDefault();
+      
+        var searchTerm = document.getElementById("search").value.toLowerCase();
+        var projectCards = document.querySelectorAll(".project-card");
+      
+        projectCards.forEach(function (card) {
+          var projectTitle = card.querySelector("h2").textContent.toLowerCase();
+          var projectDescription = card.querySelector("p").textContent.toLowerCase();
+      
+          if (
+            projectTitle.includes(searchTerm) ||
+            projectDescription.includes(searchTerm)
+          ) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+      
+  </script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style2.css">
+        <title>Home</title>
+    </head>
+    <body>
+        <header>
+            <h1>Home</h1>
+        </header>
+        <div class="center">
+            <div class="wrapper">
+              <div class="inner">
+                <div class="card">
+                  <img src="rowmic.jpg">
+                  <div class="content">
+                    <h1>Rowmic Logistics</h1>
+                    <h3>Website Development</h3>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="chatnet.jpg">
+                  <div class="content">
+                    <h1>Chatnet Technologies</h1>
+                    <h3>Website Development</h3>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="CYBERSPACE3.jpg">
+                  <div class="content">
+                    <h1>Cyberspace</h1>
+                    <h3>Company's Blog</h3>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="420.png">
+                  <div class="content">
+                    <h1>420 Records</h1>
+                    <h3>Music streaming app</h3>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="estate.jpeg">
+                  <div class="content">
+                    <h1>Mponda Estate Investment</h1>
+                    <h3>Mobile app Development</h3>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="landscaping.jpeg">
+                  <div class="content">
+                    <h1>Mponda Landscaping</h1>
+                    <h3>Customers Booking app</h3>
+                  </div>
+                </div>
+                      <div class="card">
+                  <img src="write.jpg">
+                  <div class="content">
+                    <h1>Doc Write Consult</h1>
+                    <h3>Website Development</h3>
+                  </div>
+                </div>
+                      <div class="card">
+                  <img src="holding.jpeg">
+                  <div class="content">
+                    <h1>Chati Holdings</h1>
+                    <h3>Website Development</h3>
+                  </div>
+                </div>
+                      <div class="card">
+                  <img src="cillah.jpeg">
+                  <div class="content">
+                    <h1>Cillah Travels</h1>
+                    <h3>Website Development</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="map">
+              <button class="active first"></button>
+              <button class="second"></button>
+              <button class="third"></button>
+            </div>
+          </div>
+          <form>
+            <div class="container">
+                <div class="row">
+                        <h1>Feedback</h1>
+                </div>
+                <div class="row">
+                        <h3 style="text-align:center" >I'd love to hear from you!</h3>
+                </div>
+                <div class="row input-container">
+                        <div class="col-xs-12">
+                            <div class="styled-input wide">
+                                <input type="text" required />
+                                <label>Name</label> 
+                            </div>
+                        </div>
+                        <div class="email">
+                            <div class="styled-input">
+                                <input type="text" required />
+                                <label>Email</label> 
+                            </div>
+                        </div>
+                        <div class="phone">
+                            <div class="styled-input" style="float:right;">
+                                <input type="text" required />
+                                <label>Phone Number</label> 
+                            </div>
+                        </div>
+                        <div class="text">
+                            <div class="styled-input wide">
+                                <textarea required></textarea>
+                                <label>Message</label>
+                            </div>
+                        </div>
+                        <div class="submit">
+                            <div class="btn-lrg submit-btn">Send Message</div>
+                        </div>
+                </div>
+            </div>
+        </form>
+        <script>
+            window.addEventListener("DOMContentLoaded", function() {
+                const slides = document.querySelectorAll(".card");
+                const buttons = document.querySelectorAll(".map button");
+        
+                let currentSlide = 0;
+        
+                function showSlide(n) {
+                    slides.forEach(function(slide) {
+                        slide.style.transform = `translateX(-${n * 100}%)`;
+                    });
+                }
+        
+                function activateButton(n) {
+                    buttons.forEach(function(button) {
+                        button.classList.remove("active");
+                    });
+                    buttons[n].classList.add("active");
+                }
+        
+                function nextSlide() {
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    showSlide(currentSlide);
+                    activateButton(currentSlide);
+                }
+        
+                function prevSlide() {
+                    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                    showSlide(currentSlide);
+                    activateButton(currentSlide);
+                }
+        
+                buttons.forEach(function(button, index) {
+                    button.addEventListener("click", function() {
+                        showSlide(index);
+                        activateButton(index);
+                        currentSlide = index;
+                    });
+                });
+        
+                setInterval(nextSlide, 5000); 
+            });
+
+            //form validation
+            function validateForm() {
+                var nameInput = document.getElementById("nameInput");
+                var emailInput = document.getElementById("emailInput");
+                var phoneInput = document.getElementById("phoneInput");
+                var messageInput = document.getElementById("messageInput");
+                
+                if (nameInput.value.trim() === "") {
+                    alert("Please enter your name");
+                    return false;
+                }
+                
+                if (emailInput.value.trim() === "") {
+                    alert("Please enter your email");
+                    return false;
+                } else if (!isValidEmail(emailInput.value.trim())) {
+                    alert("Please enter a valid email");
+                    return false;
+                }
+                
+                if (phoneInput.value.trim() === "") {
+                    alert("Please enter your phone number");
+                    return false;
+                }
+                
+                if (messageInput.value.trim() === "") {
+                    alert("Please enter a message");
+                    return false;
+                }
+                
+                alert("Form submitted successfully!");
+                return true;
+            }
+            
+            function isValidEmail(email) {
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+
+        </script>
+        
+    </body>
+
+</html>

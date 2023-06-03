@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+                font-size: 36px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            header {
+                background-color: darkblue;
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+              }
+                .container {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: center;
+                  align-items: flex-start;
+                  padding: 20px;
+                  background-color: seashell;
+                  border: 2px solid brown;
+                  border-radius: 5px;
+                }
+              
+                .profile {
+                  text-align: center;
+                  margin-bottom: 20px;
+                }
+              
+                .profile img {
+                  width: 300px;
+                  height: 300px;
+                  border-radius: 50%;
+
+                }
+              
+                #text {
+                  text-align: center;
+                  margin-bottom: 20px;
+                  text-decoration: aqua;
+                  font-family: Verdana, Geneva, Tahoma, sans-serif;
+                  font-size: 20px;
+                }
+               
+                .icons {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  margin: 10px;
+                }
+              
+                .icons img {
+                  width: 30px;
+                  height: 30px;
+                  margin-bottom: 5px;
+                }
+
+              
+                form {
+                    max-width: 400px;
+                    margin: 0 auto;
+                  }
+                  
+                  h2 {
+                    text-align: center;
+                  }
+                  
+                  .form-group {
+                    margin-bottom: 20px;
+                  }
+                  
+                  label {
+                    display: block;
+                    font-weight: bold;
+                  }
+                  input[type="date"],
+                  input[type="text"],
+                  input[type="email"],
+                  input[type="tel"],
+                  textarea {
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid brown;
+                    border-radius: 5px;
+                  }
+                  
+                  button[type="submit"] {
+                    display: block;
+                    width: 100%;
+                    padding: 10px;
+                    background-color: darkblue;
+                    color: #fff;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                  }
+                  
+                  button[type="submit"]:hover {
+                    background-color: #0056b3;
+                  }
+                  
+        </style>
+        <title>Contacts</title>
+    </head>
+    <body>
+      <header>
+        <h1>Contacts</h1>
+      </header> 
+      <div class="container">
+      <div class="profile">
+        <img src="profile5.jpg" alt="image">
+      </div> 
+      <p id="text">Name: Willard Chati<br>
+      Contact:<br>
+      Airtel:+265998799408<br>
+      Tnm:+265883325080</p>
+                    
+      <div class="icons">
+        <a href="https://twitter.com/willardchati">
+        <img src="twitter.png" alt="image">
+        </a>
+      </div> 
+      <div class="icons">
+        <a href="https://instagram.com/will28_jr">
+        <img src="insta.png" alt="image">
+        </a>
+      </div> 
+      <div class="icons">
+        <a href="https://github.com/Willardjr">
+        <img src="github.png" alt="image">
+        </a>
+      </div> 
+      <div class="icons">
+        <a href="https://api.whatsapp.com/send?phone=+265883325080">
+        <img src="whatsapp.png" alt="image">
+        </a>
+      </div>
+      <div class="icons">
+        <a href="https://facebook.com/Will jr Chati">
+        <img src="facebook.png" alt="image">
+        </a>
+      </div>
+      <div class="icons">
+        <a href="https://maps.app.goo.gl/S2Ny7VRqAMLUNQRj8">
+        <img src="map.png" alt="image">
+        </a>
+      </div>
+      <form id="quotation-form">
+        <h2>Request a Service</h2>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Service name:</label>
+            <input type="text" id="phone" name="quotation" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Date:</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+        <div class="form-group">
+          <label for="message">Requirements:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        
+        <button type="submit">Submit</button>
+      </form>
+   
+    </body>
+
+</html>
