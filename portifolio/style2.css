@@ -1,0 +1,87 @@
+/* css for the home page*/
+header {
+  background-color: darkblue;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+}
+  
+  
+  
+  body{
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-color: seashell; 
+        
+  }
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: seashell;
+  }
+
+  .card {
+    transition: background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    border: 5px solid brown;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    background-color: darkblue;
+    transition: background-color 0.3s;
+  }
+  
+  .card img {
+    width: 200px;
+    height: 200px;
+  }
+  .card.content {
+    background-color: darkblue;
+    transition: background-color 0.3s;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+/*/ Form CSS*/
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+.container {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+input[type="date"],
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid brown;
+  border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+ 
+ 
