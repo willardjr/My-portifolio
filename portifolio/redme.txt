@@ -1,0 +1,5 @@
+Assignment 4
+
+My portifolio is in php,javascript,css and html. To be able to view my portifolio you have to pull all the files from github in my repositery copy them into a folder called portifolio . After that you should create you should paste the folder that has been created and paste it into a folder named htdocs in Xammp. Make sure your using xammp for this to work accordingly.  After pasting it into htdocs you can start your control panel then you should import the database into your xampp and should be named myportifolio.
+
+After all this then you can be able to view my page by going into yoyur browser and type this in URL bar;http://localhost/portifolio/index.php while apache and mysql has been started on the control panel.
